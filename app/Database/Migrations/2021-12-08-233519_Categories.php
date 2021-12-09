@@ -18,20 +18,20 @@ class Categories extends Migration
             ],
             'name'  => [
                 'type'              => 'VARCHAR',
-                'constrain'         => '5',
-            ],
+                'constrain'         => '20',
+            ]
         ]);
 
         // create primary key
         $this->forge->addKey('id', TRUE);
 
-        // create table news
+        // create table categories
         $this->forge->createTable('categories', TRUE);
     }
 
     public function down()
     {
-        // drop table user
+        // drop table categories
         $this->forge->dropTable('categories');
     }
 }

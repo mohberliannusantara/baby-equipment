@@ -18,28 +18,27 @@ class User extends Migration
             ],
             'name'  => [
                 'type'              => 'VARCHAR',
-                'constrain'         => '5',
+                'constrain'         => '100',
             ],
             'email'  => [
                 'type'              => 'VARCHAR',
-                'constrain'         => '5',
+                'constrain'         => '100',
             ],
             'password'  => [
                 'type'              => 'VARCHAR',
-                'constrain'         => '5',
+                'constrain'         => '30',
             ],
             'phone'  => [
                 'type'              => 'VARCHAR',
-                'constrain'         => '5',
-            ],
+                'constrain'         => '13',
+            ]
         ]);
 
         // create primary key
         $this->forge->addKey('id', TRUE);
 
-        // create table news
+        // create table user
         $this->forge->createTable('user', TRUE);
-
     }
 
     public function down()
