@@ -55,41 +55,51 @@
     </div>
     <!-- Offcanvas Menu End -->
 
-    <!-- Header Section Begin -->
-    <header class="header">
-        <div class="container-fluid">
+    <!-- Content Section Begin -->
+    <!-- Breadcrumb Begin -->
+    <div class="breadcrumb-option">
+        <div class="container">
             <div class="row">
-                <div class="col-xl-3 col-lg-2">
-                    <div class="header__logo">
-                        <a href="./index.html"><img src="<?php echo base_url('/img/logo.png'); ?>" alt=""></a>
-                    </div>
+                <div class="col-lg-12">
+                    <a href="<?php echo site_url('home'); ?>"><img src="<?php echo base_url('/img/logo.png'); ?>" alt=""></a>
                 </div>
-                <div class="col-xl-6 col-lg-7">
-                    <nav class="header__menu">
-                        <ul>
-                            <li class="<?php if ($page == 'home'): ?>active<?php endif; ?>"><a href="<?php echo site_url('home') ?>">Home</a></li>
-                            <li class="<?php if ($page == 'shop'): ?>active<?php endif; ?>"><a href="<?php echo site_url('shop') ?>">Shop</a></li>
-                            <!-- <li><a href="./blog.html">Blog</a></li> -->
-                            <li class="<?php if ($page == 'contact'): ?>active<?php endif; ?>"><a href="<?php echo site_url('contact') ?>">Contact</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-lg-3">
-                    <div class="header__right">
-                        <div class="header__right__auth">
-                            <a href="<?php echo site_url('authentication') ?>">Login</a>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <!-- Contact Section Begin -->
+    <section class="contact spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="contact__content">
+                        <div class="contact__address">
+                            <h5>Contact info</h5>
+                            <ul>
+                                <li>
+                                    <p>Ashion is a company that provides various kinds of baby equipment that has very good quality</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="contact__form">
+                            <h5>Login</h5>
+                            <form action="#">
+                                <input type="text" placeholder="Email">
+                                <input type="password" placeholder="Password">
+                                <button type="submit" class="site-btn">Submit</button>
+                            </form>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="canvas__open">
-                <i class="fa fa-bars"></i>
+                <div class="col-lg-6 col-md-6">
+                    <img src="<?php echo base_url('/img/cover.jpg'); ?>" alt="">
+                </div>
             </div>
         </div>
-    </header>
+    </section>
+    <!-- Contact Section End -->
 
-    <!-- Content Section Begin -->
-    <?php echo $content ?>
     <!-- Content Section End -->
 
     <!-- Footer Section Begin -->

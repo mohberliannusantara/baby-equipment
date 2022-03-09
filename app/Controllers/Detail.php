@@ -4,13 +4,13 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 
-class Contact extends BaseController
+class Detail extends BaseController
 {
     public function index()
     {
-        $data['page'] = 'contact';
+        $data['page'] = 'shop';
 
-        $data['content'] = view('contact');
+        $data['content'] = view('product-detail');
         return view('template/index', $data);
     }
 }
